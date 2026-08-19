@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Histórico de Abastecimentos</title>
+</head>
+
+<body>
+
+    <div id="splash" class="splash">
+        <div class="splash-content">
+
+            <p>Histórico de abastecimentos</p>
+
+            <button id="themeToggle" class="theme-btn">
+                TEMA ESCURO
+            </button>
+
+            <button id="enterBtn" class="enter-btn">
+                Entrar
+            </button>
+
+        </div>
+    </div>
+
+
+    <main id="home" class="home hidden">
+
+        <h1>Histórico de Abastecimentos</h1>
+
+        <div class="formulario">
+
+            <label for="data">Data</label>
+            <input type="date" id="data">
+
+            <label for="combustivel">Combustível</label>
+            <select id="combustivel">
+                <option value="">Selecione</option>
+                <option value="Gasolina">Gasolina</option>
+                <option value="Etanol">Etanol</option>
+                <option value="Diesel">Diesel</option>
+                <option value="GNV">GNV</option>
+            </select>
+
+            <label for="litros">Litros</label>
+            <input type="number" id="litros" step="0.01" min="0">
+
+            <label for="valor_pago">Valor pago</label>
+            <input type="number" id="valor_pago" step="0.01" min="0">
+
+            <label for="quilometragem">Quilometragem</label>
+            <input type="number" id="quilometragem" step="0.1" min="0">
+
+            <button onclick="cadastrar()" class="add-btn">
+                Adicionar
+            </button>
+
+        </div>
+
+
+        <div class="formulario">
+
+            <h2>Resumo</h2>
+
+            <p>
+                <strong>Preço médio por litro:</strong>
+                R$ <span id="precoMedio">0,00</span>
+            </p>
+
+            <p>
+                <strong>Consumo médio:</strong>
+                <span id="consumoMedio">0,00</span> km/L
+            </p>
+
+        </div>
+
+
+        <div class="acoes">
+
+            <button onclick="recuperarCadastro()" class="btn-listar">
+                Atualizar lista
+            </button>
+
+            <button onclick="limparCadastro()" class="btn-limpar">
+                Limpar tudo
+            </button>
+
+        </div>
+
+
+        <div class="tabela-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Combustível</th>
+                        <th>Litros</th>
+                        <th>Valor pago</th>
+                        <th>Quilometragem</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tabelaAbastecimentos">
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <div class="formulario">
+
+            <h2>Comparativo dos abastecimentos</h2>
+
+            <canvas id="graficoAbastecimentos"></canvas>
+
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="script2.js"></script>
+
+</body>
+
+</html>

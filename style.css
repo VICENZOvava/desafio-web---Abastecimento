@@ -1,0 +1,207 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #000000;
+    color: #17202a;
+    transition: 0.3s;
+}
+
+.splash {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    background: white;
+}
+
+.splash-content {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    color: white;
+}
+
+.splash p {
+    opacity: 0.85;
+    margin-bottom: 32px;
+    color: rgb(22, 150, 164);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.theme-btn {
+    margin-bottom: 12px;
+    background: rgb(22, 150, 164);
+    color: white;
+    font-weight: bold;
+}
+
+.enter-btn {
+    background: rgb(22, 150, 164);
+    color: white;
+    font-weight: bold;
+}
+
+.home {
+    min-height: 100vh;
+    padding: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.home h1 {
+    margin-bottom: 25px;
+    color: rgb(22, 150, 164);
+    text-align: center;
+}
+
+.formulario {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 6px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.formulario label:first-child {
+    margin-top: 0;
+}
+
+.formulario input,
+.formulario select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d5dfe2;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.add-btn {
+    margin-top: 20px;
+    background: rgb(22, 150, 164);
+    color: white;
+}
+
+.tabela-container {
+    width: 100%;
+    overflow-x: auto;
+    background: white;
+    border-radius: 16px;
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+}
+
+thead {
+    background: rgb(22, 150, 164);
+    color: white;
+}
+
+th,
+td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+tbody tr:hover {
+    background: #f2fafa;
+}
+
+.btn-excluir {
+    width: auto;
+    padding: 8px 12px;
+    background: #dc3545;
+    color: white;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.acoes {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.acoes button {
+    flex: 1;
+}
+
+.btn-listar {
+    background: rgb(22, 150, 164);
+    color: white;
+}
+
+.btn-limpar {
+    background: #dc3545;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* GRÁFICO */
+
+#graficoAbastecimentos {
+    width: 100%;
+    max-height: 400px;
+}
+
+
+/* TEMA ESCURO */
+
+body.dark {
+    background: #121212;
+    color: #fff;
+}
+
+body.dark .home {
+    background: #121212;
+}
+
+body.dark .formulario {
+    background: #1e1e1e;
+    color: white;
+}
+
+body.dark .tabela-container {
+    background: #1e1e1e;
+    color: white;
+}
+
+body.dark th,
+body.dark td {
+    border-color: #333;
+}
+
+body.dark tbody tr:hover {
+    background: #292929;
+}
