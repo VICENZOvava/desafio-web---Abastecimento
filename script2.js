@@ -273,10 +273,6 @@ function excluirAbastecimento(indice) {
 }
 
 
-// ==========================
-// CALCULAR MÉDIAS
-// ==========================
-
 function calcularMedias(lista) {
 
     let precoMedioElement =
@@ -296,10 +292,6 @@ function calcularMedias(lista) {
 
     }
 
-
-    // --------------------------
-    // PREÇO MÉDIO POR LITRO
-    // --------------------------
 
     let totalLitros = 0;
     let totalPago = 0;
@@ -323,10 +315,6 @@ function calcularMedias(lista) {
     precoMedioElement.innerText =
         precoMedio.toFixed(2).replace(".", ",");
 
-
-    // --------------------------
-    // CONSUMO KM/L
-    // --------------------------
 
     if (lista.length < 2) {
 
@@ -397,10 +385,6 @@ function calcularMedias(lista) {
 
 }
 
-
-// ==========================
-// GRÁFICO
-// ==========================
 
 function criarGrafico(lista) {
 
